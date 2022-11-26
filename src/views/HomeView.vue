@@ -146,7 +146,7 @@ const dates = reactive([
   <main class="mx-auto p-8  min-h-screen bg-cover" style="background-image: url('/christmas3.jpg')">
 
     <div class="rounded-lg p-8 ">
-      <h1 @clik="setIsOpen()" class="text-4xl font-bold text-blue-200  mt-4 mb-20 text-center">
+      <h1 @clik="setIsOpen()" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-200  mt-4 mb-20 text-center">
         Amber's Advent Calendar
       </h1>
 
