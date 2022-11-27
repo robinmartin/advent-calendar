@@ -27,22 +27,22 @@ function showModal(date) {
 const dates = reactive([
   {
     date: moment("2022/12/1"),
-    message: 'Can you play the piano?',
+    message: 'Go to daddy\s office and look under the piano',
     icon: 'fa-sleigh'
   },
   {
     date: moment("2022/12/2"),
-    message: 'Can you play the piano?',
+    message: 'It\'s under your pillow!',
     icon: 'fa-candy-cane'
   },
   {
     date: moment("2022/12/3"),
-    message: 'Can you play the piano?',
+    message: 'I\'d like some cold water please!',
     icon: 'fa-gift'
   },
   {
     date: moment("2022/12/4"),
-    message: 'Can you play the piano?',
+    message: 'Something is hiding in Coal\'s Corner',
     icon: 'fa-holly-berry'
   },
   {
@@ -172,7 +172,7 @@ const dates = reactive([
         </div>
       </div>
 
-      <div class="mt-16 text-center text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl  ">
+      <div class="mt-16 text-center text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold ">
         {{ daysToChristmas() }} more sleeps until christmas!
       </div>
 
@@ -194,23 +194,21 @@ const dates = reactive([
             leave-from="opacity-100 translate-y-0 sm:scale-100"
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 w-12/12 sm:p-6">
-              <div class="">
+              class=" bg-blue-700/0 w-fit relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left transition-all sm:my-8 sm:p-6">
+              <div class="flex items-center">
 
-
-                <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle as="h3" class="text-xl font-medium leading-6 text-gray-900">
-                    {{ modalData.date.message }}
-                  </DialogTitle>
-                  
-                  <!-- <div class="mt-4">
-                    <p class="text-base text-gray-500">
-                      {{ modalData.date.message }}
-                    </p>
-                  </div> -->
-                  <div class="mt-4">
-                    <img src="/elf.png" class="mx-auto h-48">
+                <div class="mt-4">
+                    <img src="/elf.png" class="mx-auto h-96">
                   </div>
+                <div class="text-center -ml-24 -mt-24">
+
+                  <DialogTitle as="h3" class="text-3xl font-medium leading-6 text-gray-900 min-w-full bg-white rounded-lg py-24 px-8 shadow-xl">
+                    <div class="text-center">
+                      "{{ modalData.date.message }}"
+                    </div>
+                  </DialogTitle>
+           
+                  
                 </div>
               </div>
 
