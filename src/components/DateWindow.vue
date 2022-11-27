@@ -1,13 +1,10 @@
 <template>
-  <div ref="parent" class="relative flex self-center justify-center items-center rounded-lg">
-    <canvas class="z-20 rounded-lg" ref="myCanvas" @click="toggleModal" @mousedown="canvasDraw" @mousemove="mouseMove" @mouseup="finishDraw"
+  <div ref="parent" class="relative flex self-center justify-center items-center rounded-lg shadow-inner bg-gray-100/40 shadow-gray-900">
+    <canvas class="z-20 rounded-lg   shadow-2xl" ref="myCanvas" @click="showDatePopup" @mousedown="canvasDraw" @mousemove="mouseMove" @mouseup="finishDraw"
       @touchmove="touchMove" :width="width" :height="height">
     </canvas>
-    <div class="absolute text-center flex z-10 justify-center items-center">
-      <button>
-        <i class="text-blue-900 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl fa-solid fa-gift"></i>
-      </button>
-
+    <div class="absolute text-center rounded-lg  flex z-10 justify-center items-center">
+        <i class="text-green-700 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl fa-solid fa-gift"></i>
     </div>
   </div>
 </template>
@@ -15,9 +12,9 @@
 <script setup>
 import { useMouse } from "@vueuse/core";
 import moment from "moment";
-import { defineProps, onMounted, onUpdated, reactive, ref } from "vue";
+import { defineProps, computed, defineEmits, onMounted, onUpdated, reactive, ref } from "vue";
 
- 
+const emit = defineEmits(['opened'])
 
 const props = defineProps({
   date: {
@@ -26,16 +23,26 @@ const props = defineProps({
   },
 });
 
+const today = moment('2022-12-04');
+
+const isOldDate = computed(() => {
+  return props.date.date.isBefore(today, "day");
+})
+
+const isToday = computed(() => {
+  return props.date.date.isSame(today, "day");
+})
+
+
 const getDay = () => {
-  return moment(props.date.date).format("D");
+  return props.date.date.format("D");
 };
 
-const showModal = ref(false);
+
 const finished = ref(false);
-const toggleModal = () => {
-  if (finished.value) {
-    console.log('showing modal');
-    showModal.value = !showModal.value;
+const showDatePopup = () => {
+  if (finished.value || isOldDate.value) {
+    emit('opened', props.date)
   }
   
 };
@@ -72,7 +79,7 @@ const initCanvas = () => {
 
   // draw the text ie the date number
   ctx.fillStyle = "#fff";
-  ctx.canvas.style.opacity = 1;
+  ctx.canvas.style.opacity = isOldDate.value ? 0 : 1;
   ctx.textAlign = "center";
   ctx.textBaseline = 'middle';
   ctx.font = '36px sans-serif';
@@ -150,7 +157,7 @@ const fadeOut = (ctx) => {
     if (timesRun === 200) {
       clearInterval(interval);
       finished.value = true
-      toggleModal()
+      // showDatePopup()
     }
   }, 3);
 

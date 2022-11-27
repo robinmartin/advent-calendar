@@ -1,142 +1,153 @@
 <script setup>
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle
+} from '@headlessui/vue';
+import moment from 'moment';
 import { reactive, ref } from 'vue';
 import DateWindow from '../components/DateWindow.vue';
-import {
-    Dialog,
-    DialogPanel,
-    DialogTitle,
-    DialogDescription,
-  } from '@headlessui/vue'
-  const isOpen = ref(true)
 
-  function setIsOpen(value) {
-    console.log('here')
-    isOpen.value = value
-  }
+
+const open = ref(false)
+
+function daysToChristmas(date) {
+  return moment('2022-12-25').diff(date, 'days');
+}
+
+const modalData = reactive({
+  date: null,
+})
+
+function showModal(date) {
+  console.log(date)
+  modalData.date = date;
+  open.value = true
+}
 const dates = reactive([
   {
-    date: new Date(2022, 12, 1),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-1"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 2),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-2"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 3),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-3"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 4),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-4"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 5),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-5"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 6),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-6"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 7),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-7"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 8),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-8"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 9),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-9"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 10),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-10"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 11),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-11"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 12),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-12"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 13),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-13"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 14),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-14"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 15),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-15"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 16),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-16"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 17),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-17"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 18),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-18"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 19),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-19"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 20),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-20"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 21),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-21"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 22),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-22"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 23),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-23"),
+    message: 'Can you play the piano?',
     opened: false
   },
   {
-    date: new Date(2022, 11, 24),
-    message: 'Merry Xmas 2!',
+    date: moment("2022-12-24"),
+    message: 'Can you play the piano?',
     opened: true
   },
   {
-    date: new Date(2022, 12, 25),
-    message: 'Merry Xmas!',
+    date: moment("2022-12-25"),
+    message: 'Can you play the piano?',
     opened: false
   },
 ])
@@ -145,20 +156,67 @@ const dates = reactive([
 <template>
   <main class="mx-auto p-8  min-h-screen bg-cover" style="background-image: url('/christmas3.jpg')">
 
+
+
+
     <div class="rounded-lg p-8 ">
-      <h1 @clik="setIsOpen()" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-200  mt-4 mb-20 text-center">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-200  mt-4 mb-20 text-center">
         Amber's Advent Calendar
       </h1>
 
       <div class="grid grid-cols-5 gap-12 justify-items-center">
-        <div v-for="date in dates" class="w-12 sm:w-20 md:w-28 lg:w-36 xl:w-44 2xl:w-56 h-12 sm:h-20 md:h-28 lg:h-36 xl:h-44 2xl:h-56 shadow-inner-2xl rounded-lg bg-blue-400">
-          <DateWindow :date="date" />
+        <div v-for="date in dates"
+          class="w-12 sm:w-20 md:w-28 lg:w-36 xl:w-44 2xl:w-56 h-12 sm:h-20 md:h-28 lg:h-36 xl:h-44 2xl:h-56  rounded-lg">
+          <DateWindow :date="date" @opened="showModal(date)" />
         </div>
       </div>
 
     </div>
   </main>
-  
+
+  <TransitionRoot as="template" :show="open">
+    <Dialog as="div" class="relative z-50" :open="open" @close="open = false">
+      <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+        leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+      </TransitionChild>
+
+      <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <TransitionChild as="template" enter="ease-out duration-300"
+            enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
+            leave-from="opacity-100 translate-y-0 sm:scale-100"
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+            <DialogPanel
+              class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 w-12/12 sm:p-6">
+              <div class="">
+
+
+                <div class="mt-3 text-center sm:mt-5">
+                  <DialogTitle as="h3" class="text-xl font-medium leading-6 text-gray-900">
+                    <!-- {{ daysToChristmas(modalData.date.date) }} more sleeps until christmas! -->
+                    {{ modalData.date.message }}
+                  </DialogTitle>
+                  
+                  <!-- <div class="mt-4">
+                    <p class="text-base text-gray-500">
+                      {{ modalData.date.message }}
+                    </p>
+                  </div> -->
+                  <div class="mt-4">
+                    <img src="/elf.png" class="mx-auto h-48">
+                  </div>
+                </div>
+              </div>
+
+            </DialogPanel>
+          </TransitionChild>
+        </div>
+      </div>
+    </Dialog>
+  </TransitionRoot>
+
 </template>
 
 <style scoped>
