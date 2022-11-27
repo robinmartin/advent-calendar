@@ -25,7 +25,7 @@ const props = defineProps({
   },
 });
 
-const today = moment('2022-12-04');
+const today = moment('2022/12/04');
 
 const isPast = computed(() => {
   return props.date.date.isBefore(today, "day");
