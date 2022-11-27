@@ -27,7 +27,7 @@ function showModal(date) {
 const dates = reactive([
   {
     date: moment("2022/12/1"),
-    message: 'Go to daddy\s office and look under the piano',
+    message: 'Go to Daddy\'s office and look under the piano',
     icon: 'fa-sleigh'
   },
   {
@@ -172,7 +172,7 @@ const dates = reactive([
         </div>
       </div>
 
-      <div class="mt-16 text-center text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold ">
+      <div class="mt-16 text-center text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold ">
         {{ daysToChristmas() }} more sleeps until christmas!
       </div>
 
