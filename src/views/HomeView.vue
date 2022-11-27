@@ -12,7 +12,7 @@ import DateWindow from '../components/DateWindow.vue';
 const open = ref(false)
 
 function daysToChristmas() {
-  return moment('2022-12-25').diff(moment(), 'days');
+  return moment('2022/12/25').diff(moment(), 'days');
 }
 
 const modalData = reactive({
@@ -26,128 +26,128 @@ function showModal(date) {
 }
 const dates = reactive([
   {
-    date: moment("2022-12-1"),
+    date: moment("2022/12/1"),
     message: 'Can you play the piano?',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022-12-2"),
+    date: moment("2022/12/2"),
     message: 'Can you play the piano?',
     icon: 'fa-candy-cane'
   },
   {
-    date: moment("2022-12-3"),
+    date: moment("2022/12/3"),
     message: 'Can you play the piano?',
     icon: 'fa-gift'
   },
   {
-    date: moment("2022-12-4"),
+    date: moment("2022/12/4"),
     message: 'Can you play the piano?',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022-12-5"),
+    date: moment("2022/12/5"),
     message: 'Can you play the piano?',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022-12-6"),
+    date: moment("2022/12/6"),
     message: 'Can you play the piano?',
     icon: 'fa-tree'
   },
   {
-    date: moment("2022-12-7"),
+    date: moment("2022/12/7"),
     message: 'Can you play the piano?',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022-12-8"),
+    date: moment("2022/12/8"),
     message: 'Can you play the piano?',
     icon: 'fa-candy-cane'
   },
   {
-    date: moment("2022-12-9"),
+    date: moment("2022/12/9"),
     message: 'Can you play the piano?',
     icon: 'fa-gift'
   },
   {
-    date: moment("2022-12-10"),
+    date: moment("2022/12/10"),
     message: 'Can you play the piano?',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022-12-11"),
+    date: moment("2022/12/11"),
     message: 'Can you play the piano?',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022-12-12"),
+    date: moment("2022/12/12"),
     message: 'Can you play the piano?',
     icon: 'fa-tree'
     
   },
   {
-    date: moment("2022-12-13"),
+    date: moment("2022/12/13"),
     message: 'Can you play the piano?',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022-12-14"),
+    date: moment("2022/12/14"),
     message: 'Can you play the piano?',
     icon: 'fa-fa-candy-cane'
   },
   {
-    date: moment("2022-12-15"),
+    date: moment("2022/12/15"),
     message: 'Can you play the piano?',
     icon: 'fa-gift'
   },
   {
-    date: moment("2022-12-16"),
+    date: moment("2022/12/16"),
     message: 'Can you play the piano?',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022-12-17"),
+    date: moment("2022/12/17"),
     message: 'Can you play the piano?',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022-12-18"),
+    date: moment("2022/12/18"),
     message: 'Can you play the piano?',
     icon: 'fa-tree'
   },
   {
-    date: moment("2022-12-19"),
+    date: moment("2022/12/19"),
     message: 'Can you play the piano?',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022-12-20"),
+    date: moment("2022/12/20"),
     message: 'Can you play the piano?',
     icon: 'fa-candy-cane'
   },
   {
-    date: moment("2022-12-21"),
+    date: moment("2022/12/21"),
     message: 'Can you play the piano?',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022-12-22"),
+    date: moment("2022/12/22"),
     message: 'Can you play the piano?',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022-12-23"),
+    date: moment("2022/12/23"),
     message: 'Can you play the piano?',
     icon: 'fa-gift'
   },
   {
-    date: moment("2022-12-24"),
+    date: moment("2022/12/24"),
     message: 'Can you play the piano?',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022-12-25"),
+    date: moment("2022/12/25"),
     message: 'Can you play the piano?',
     icon: 'fa-gift'
   },
