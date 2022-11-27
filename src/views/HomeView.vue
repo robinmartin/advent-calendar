@@ -11,8 +11,8 @@ import DateWindow from '../components/DateWindow.vue';
 
 const open = ref(false)
 
-function daysToChristmas(date) {
-  return moment('2022-12-25').diff(date, 'days');
+function daysToChristmas() {
+  return moment('2022-12-25').diff(moment(), 'days');
 }
 
 const modalData = reactive({
@@ -28,127 +28,128 @@ const dates = reactive([
   {
     date: moment("2022-12-1"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-sleigh'
   },
   {
     date: moment("2022-12-2"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-candy-cane'
   },
   {
     date: moment("2022-12-3"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-gift'
   },
   {
     date: moment("2022-12-4"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-holly-berry'
   },
   {
     date: moment("2022-12-5"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-cross'
   },
   {
     date: moment("2022-12-6"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-tree'
   },
   {
     date: moment("2022-12-7"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-sleigh'
   },
   {
     date: moment("2022-12-8"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-candy-cane'
   },
   {
     date: moment("2022-12-9"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-gift'
   },
   {
     date: moment("2022-12-10"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-holly-berry'
   },
   {
     date: moment("2022-12-11"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-cross'
   },
   {
     date: moment("2022-12-12"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-tree'
+    
   },
   {
     date: moment("2022-12-13"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-sleigh'
   },
   {
     date: moment("2022-12-14"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-fa-candy-cane'
   },
   {
     date: moment("2022-12-15"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-gift'
   },
   {
     date: moment("2022-12-16"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-holly-berry'
   },
   {
     date: moment("2022-12-17"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-cross'
   },
   {
     date: moment("2022-12-18"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-tree'
   },
   {
     date: moment("2022-12-19"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-sleigh'
   },
   {
     date: moment("2022-12-20"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-candy-cane'
   },
   {
     date: moment("2022-12-21"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-holly-berry'
   },
   {
     date: moment("2022-12-22"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-cross'
   },
   {
     date: moment("2022-12-23"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-gift'
   },
   {
     date: moment("2022-12-24"),
     message: 'Can you play the piano?',
-    opened: true
+    icon: 'fa-sleigh'
   },
   {
     date: moment("2022-12-25"),
     message: 'Can you play the piano?',
-    opened: false
+    icon: 'fa-gift'
   },
 ])
 </script>
@@ -160,7 +161,7 @@ const dates = reactive([
 
 
     <div class="rounded-lg p-8 ">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-200  mt-4 mb-20 text-center">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-blue-200  mt-4 mb-20 text-center">
         Amber's Advent Calendar
       </h1>
 
@@ -169,6 +170,10 @@ const dates = reactive([
           class="w-12 sm:w-20 md:w-28 lg:w-36 xl:w-44 2xl:w-56 h-12 sm:h-20 md:h-28 lg:h-36 xl:h-44 2xl:h-56  rounded-lg">
           <DateWindow :date="date" @opened="showModal(date)" />
         </div>
+      </div>
+
+      <div class="mt-16 text-center text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl  ">
+        {{ daysToChristmas() }} more sleeps until christmas!
       </div>
 
     </div>
@@ -195,7 +200,6 @@ const dates = reactive([
 
                 <div class="mt-3 text-center sm:mt-5">
                   <DialogTitle as="h3" class="text-xl font-medium leading-6 text-gray-900">
-                    <!-- {{ daysToChristmas(modalData.date.date) }} more sleeps until christmas! -->
                     {{ modalData.date.message }}
                   </DialogTitle>
                   

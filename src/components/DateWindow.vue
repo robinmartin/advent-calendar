@@ -1,10 +1,12 @@
 <template>
-  <div ref="parent" class="relative flex self-center justify-center items-center rounded-lg shadow-inner bg-gray-100/40 shadow-gray-900">
-    <canvas class="z-20 rounded-lg   shadow-2xl" ref="myCanvas" @click="showDatePopup" @mousedown="canvasDraw" @mousemove="mouseMove" @mouseup="finishDraw"
-      @touchmove="touchMove" :width="width" :height="height">
+  <div ref="parent"
+    class="relative flex self-center justify-center items-center rounded-lg shadow-inner bg-gray-100/40 shadow-gray-900">
+    <i v-if="isFuture" class="z-40 absolute top-0 left-0 text-white fa fa-lock text-xs sm:text-md md:text-lg lg:text-xl sm:px-2 sm:py-1"/>
+    <canvas class="z-20 rounded-lg shadow-2xl" ref="myCanvas" @click="showDatePopup" @mousedown="canvasDraw"
+      @mousemove="mouseMove" @mouseup="finishDraw" @touchmove="touchMove" :width="width" :height="height">
     </canvas>
     <div class="absolute text-center rounded-lg  flex z-10 justify-center items-center">
-        <i class="text-green-700 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl fa-solid fa-gift"></i>
+      <i class="text-green-700 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl fa-solid " :class="date.icon"></i>
     </div>
   </div>
 </template>
@@ -12,7 +14,7 @@
 <script setup>
 import { useMouse } from "@vueuse/core";
 import moment from "moment";
-import { defineProps, computed, defineEmits, onMounted, onUpdated, reactive, ref } from "vue";
+import { computed, defineEmits, defineProps, onMounted, onUpdated, reactive, ref } from "vue";
 
 const emit = defineEmits(['opened'])
 
@@ -25,12 +27,16 @@ const props = defineProps({
 
 const today = moment('2022-12-04');
 
-const isOldDate = computed(() => {
+const isPast = computed(() => {
   return props.date.date.isBefore(today, "day");
 })
 
 const isToday = computed(() => {
   return props.date.date.isSame(today, "day");
+})
+
+const isFuture = computed(() => {
+  return props.date.date.isAfter(today, "day");
 })
 
 
@@ -41,10 +47,10 @@ const getDay = () => {
 
 const finished = ref(false);
 const showDatePopup = () => {
-  if (finished.value || isOldDate.value) {
+  if (finished.value || isPast.value) {
     emit('opened', props.date)
   }
-  
+
 };
 const myCanvas = ref(null);
 const parent = ref(null);
@@ -79,10 +85,10 @@ const initCanvas = () => {
 
   // draw the text ie the date number
   ctx.fillStyle = "#fff";
-  ctx.canvas.style.opacity = isOldDate.value ? 0 : 1;
+  ctx.canvas.style.opacity = isPast.value ? 0 : 1;
   ctx.textAlign = "center";
   ctx.textBaseline = 'middle';
-  ctx.font = '36px sans-serif';
+  ctx.font = '48px Mountains of Christmas';
   ctx.fillText(scratchText.value, width.value / 2, height.value / 2);
 
   autoScratching();
@@ -97,21 +103,25 @@ const autoScratching = () => {
 };
 
 const scratching = () => {
-  const { x, y } = getClientOffset(mouse);
-  const canvas = myCanvas.value;
-  const ctx = canvas.getContext("2d");
-  const offsetX = x - 0.001;
-  const offsetY = y - 0.001;
+  console.log(isToday.value)
+  if (isToday.value) {
+    const { x, y } = getClientOffset(mouse);
+    const canvas = myCanvas.value;
+    const ctx = canvas.getContext("2d");
+    const offsetX = x - 0.001;
+    const offsetY = y - 0.001;
 
-  ctx.globalCompositeOperation = "destination-out";
-  ctx.lineJoin = "round";
-  ctx.lineCap = "round";
-  ctx.lineWidth = "30";
-  ctx.beginPath();
-  ctx.moveTo(x, y);
-  ctx.lineTo(offsetX, offsetY);
-  ctx.stroke();
-  getFilledPercentage(ctx);
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+    ctx.lineWidth = "30";
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(offsetX, offsetY);
+    ctx.stroke();
+    getFilledPercentage(ctx);
+  }
+
 };
 
 
