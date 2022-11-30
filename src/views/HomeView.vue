@@ -32,7 +32,7 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/2"),
-    message: 'It\'s under your pillow!',
+    message: 'Where do all the bananas, apples and oranges live?',
     icon: 'fa-candy-cane'
   },
   {
