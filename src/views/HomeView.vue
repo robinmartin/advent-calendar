@@ -41,47 +41,47 @@ const dates = reactive([
     icon: 'fa-gift'
   },
   {
-    date: moment("2022/12/4"), // Saturday
+    date: moment("2022/12/4"), // Sunday
     message: 'Where does Santa sometimes get stuck?',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022/12/5"), // Sunday
+    date: moment("2022/12/5"), // Monday
     message: 'Who wants to go for a bike ride?',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022/12/6"), // Monday
+    date: moment("2022/12/6"), // Tuesday
     message: 'What\s Wrennie\'s favourite book?',
     icon: 'fa-tree'
   },
   {
-    date: moment("2022/12/7"), // Tuesday
-    message: 'Can you play the piano?',
+    date: moment("2022/12/7"), // Wednesday
+    message: 'Tickets to the wee show',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022/12/8"), // Wednesday
-    message: 'Can you play the piano?',
+    date: moment("2022/12/8"), // Thursday
+    message: 'Where the post comes in',
     icon: 'fa-candy-cane'
   },
   {
-    date: moment("2022/12/9"), // Thursday
-    message: 'Can you play the piano?',
+    date: moment("2022/12/9"), // Friday
+    message: 'On top of your wardrobe!',
     icon: 'fa-gift'
   },
   {
-    date: moment("2022/12/10"), // Friday
-    message: 'Can you play the piano?',
+    date: moment("2022/12/10"), // Saturday
+    message: 'Go to Amber\'s office!',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022/12/11"), // Saturday
+    date: moment("2022/12/11"), // Sunday
     message: 'Can you play the piano?',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022/12/12"), // Sunday
+    date: moment("2022/12/12"), // Monday
     message: 'Can you play the piano?',
     icon: 'fa-tree'
     
