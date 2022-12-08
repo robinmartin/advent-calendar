@@ -67,7 +67,7 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/9"), // Friday
-    message: 'On top of your wardrobe!',
+    message: 'Has Heart got a gift for you?',
     icon: 'fa-gift'
   },
   {
@@ -77,78 +77,78 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/11"), // Sunday
-    message: 'Can you play the piano?',
+    message: 'On top of your wardrobe!',
     icon: 'fa-cross'
   },
   {
     date: moment("2022/12/12"), // Monday
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-tree'
     
   },
   {
     date: moment("2022/12/13"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-sleigh'
   },
   {
     date: moment("2022/12/14"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-fa-candy-cane'
   },
   {
     date: moment("2022/12/15"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-gift'
   },
   {
     date: moment("2022/12/16"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-holly-berry'
   },
   {
     date: moment("2022/12/17"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-cross'
   },
   {
     date: moment("2022/12/18"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-tree'
   },
   {
     date: moment("2022/12/19"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-sleigh'
   },
   {
     date: moment("2022/12/20"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-candy-cane'
   },
   {
     date: moment("2022/12/21"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-holly-berry'
   },
   {
     date: moment("2022/12/22"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-cross'
   },
   {
     date: moment("2022/12/23"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-gift'
   },
   {
     date: moment("2022/12/24"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-sleigh'
   },
   {
     date: moment("2022/12/25"),
-    message: 'Can you play the piano?',
+    message: '',
     icon: 'fa-gift'
   },
 ])
