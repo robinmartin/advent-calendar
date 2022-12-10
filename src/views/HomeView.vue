@@ -77,72 +77,72 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/11"), // Sunday
-    message: 'On top of your wardrobe!',
+    message: 'What is cooking in Wrennie\'s kitchen?',
     icon: 'fa-cross'
   },
   {
     date: moment("2022/12/12"), // Monday
-    message: '',
+    message: 'On top of your wardrobe!',
     icon: 'fa-tree'
     
   },
   {
-    date: moment("2022/12/13"),
+    date: moment("2022/12/13"), // Tuesday 
     message: '',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022/12/14"),
+    date: moment("2022/12/14"), // Wednesday
     message: '',
     icon: 'fa-fa-candy-cane'
   },
   {
-    date: moment("2022/12/15"),
+    date: moment("2022/12/15"), // Thursday
     message: '',
     icon: 'fa-gift'
   },
   {
-    date: moment("2022/12/16"),
+    date: moment("2022/12/16"), // Friday
     message: '',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022/12/17"),
+    date: moment("2022/12/17"), // Saturday
     message: '',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022/12/18"),
+    date: moment("2022/12/18"), // Sunday
     message: '',
     icon: 'fa-tree'
   },
   {
-    date: moment("2022/12/19"),
+    date: moment("2022/12/19"), // Monday
     message: '',
     icon: 'fa-sleigh'
   },
   {
-    date: moment("2022/12/20"),
+    date: moment("2022/12/20"), // Tuesday
     message: '',
     icon: 'fa-candy-cane'
   },
   {
-    date: moment("2022/12/21"),
+    date: moment("2022/12/21"), // Wednesday
     message: '',
     icon: 'fa-holly-berry'
   },
   {
-    date: moment("2022/12/22"),
+    date: moment("2022/12/22"), // Thursday
     message: '',
     icon: 'fa-cross'
   },
   {
-    date: moment("2022/12/23"),
+    date: moment("2022/12/23"), // Friday
     message: '',
     icon: 'fa-gift'
   },
   {
-    date: moment("2022/12/24"),
+    date: moment("2022/12/24"), // Saturday
     message: '',
     icon: 'fa-sleigh'
   },
