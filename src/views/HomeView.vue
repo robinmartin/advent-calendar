@@ -94,7 +94,7 @@ const dates = reactive([
   {
     date: moment("2022/12/14"), // Wednesday
     message: 'Mummy\'s computer',
-    icon: 'fa-fa-candy-cane'
+    icon: 'fa-candy-cane'
   },
   {
     date: moment("2022/12/15"), // Thursday
@@ -108,7 +108,7 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/17"), // Saturday
-    message: '',
+    message: 'Next to Coal\'s treats!',
     icon: 'fa-cross'
   },
   {
