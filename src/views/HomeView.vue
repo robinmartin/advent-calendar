@@ -118,7 +118,7 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/19"), // Monday
-    message: '',
+    message: 'By the father christmas on the window!',
     icon: 'fa-sleigh'
   },
   {
