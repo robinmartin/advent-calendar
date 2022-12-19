@@ -123,7 +123,7 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/20"), // Tuesday
-    message: '',
+    message: 'In the chicken\'s bum!',
     icon: 'fa-candy-cane'
   },
   {
