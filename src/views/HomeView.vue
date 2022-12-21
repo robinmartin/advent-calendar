@@ -133,7 +133,7 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/22"), // Thursday
-    message: '',
+    message: 'On the treadmill',
     icon: 'fa-cross'
   },
   {
