@@ -128,7 +128,7 @@ const dates = reactive([
   },
   {
     date: moment("2022/12/21"), // Wednesday
-    message: '',
+    message: 'The llama\'s back',
     icon: 'fa-holly-berry'
   },
   {
