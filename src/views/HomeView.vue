@@ -25,125 +25,125 @@ function showModal(date) {
   open.value = true
 }
 const dates = reactive([
-  {
-    date: moment("2022/12/1"),
-    message: 'Look in the coldest place in the house',
-    icon: 'fa-sleigh'
-  },
-  {
-    date: moment("2022/12/2"),
-    message: 'Where do all the bananas, apples and oranges live?s',
-    icon: 'fa-candy-cane'
-  },
-  {
-    date: moment("2022/12/3"),
-    message: 'What do chickens lay?',
-    icon: 'fa-gift'
-  },
-  {
-    date: moment("2022/12/4"), // Sunday
-    message: 'Where does Santa sometimes get stuck?',
-    icon: 'fa-holly-berry'
-  },
-  {
-    date: moment("2022/12/5"), // Monday
-    message: 'Who wants to go for a bike ride?',
-    icon: 'fa-cross'
-  },
-  {
-    date: moment("2022/12/6"), // Tuesday
-    message: 'What\s Wrennie\'s favourite book?',
-    icon: 'fa-tree'
-  },
-  {
-    date: moment("2022/12/7"), // Wednesday
-    message: 'Tickets to the wee show',
-    icon: 'fa-sleigh'
-  },
-  {
-    date: moment("2022/12/8"), // Thursday
-    message: 'Where the post comes in',
-    icon: 'fa-candy-cane'
-  },
-  {
-    date: moment("2022/12/9"), // Friday
-    message: 'Has Heart got a gift for you?',
-    icon: 'fa-gift'
-  },
-  {
-    date: moment("2022/12/10"), // Saturday
-    message: 'Go to Amber\'s office!',
-    icon: 'fa-holly-berry'
-  },
-  {
-    date: moment("2022/12/11"), // Sunday
-    message: 'What is cooking in Wrennie\'s kitchen?',
-    icon: 'fa-cross'
-  },
-  {
-    date: moment("2022/12/12"), // Monday
-    message: 'On top of your wardrobe!',
-    icon: 'fa-tree'
+  // {
+  //   date: moment("2022/12/1"),
+  //   message: 'Look in the coldest place in the house',
+  //   icon: 'fa-sleigh'
+  // },
+  // {
+  //   date: moment("2022/12/2"),
+  //   message: 'Where do all the bananas, apples and oranges live?s',
+  //   icon: 'fa-candy-cane'
+  // },
+  // {
+  //   date: moment("2022/12/3"),
+  //   message: 'What do chickens lay?',
+  //   icon: 'fa-gift'
+  // },
+  // {
+  //   date: moment("2022/12/4"), // Sunday
+  //   message: 'Where does Santa sometimes get stuck?',
+  //   icon: 'fa-holly-berry'
+  // },
+  // {
+  //   date: moment("2022/12/5"), // Monday
+  //   message: 'Who wants to go for a bike ride?',
+  //   icon: 'fa-cross'
+  // },
+  // {
+  //   date: moment("2022/12/6"), // Tuesday
+  //   message: 'What\s Wrennie\'s favourite book?',
+  //   icon: 'fa-tree'
+  // },
+  // {
+  //   date: moment("2022/12/7"), // Wednesday
+  //   message: 'Tickets to the wee show',
+  //   icon: 'fa-sleigh'
+  // },
+  // {
+  //   date: moment("2022/12/8"), // Thursday
+  //   message: 'Where the post comes in',
+  //   icon: 'fa-candy-cane'
+  // },
+  // {
+  //   date: moment("2022/12/9"), // Friday
+  //   message: 'Has Heart got a gift for you?',
+  //   icon: 'fa-gift'
+  // },
+  // {
+  //   date: moment("2022/12/10"), // Saturday
+  //   message: 'Go to Amber\'s office!',
+  //   icon: 'fa-holly-berry'
+  // },
+  // {
+  //   date: moment("2022/12/11"), // Sunday
+  //   message: 'What is cooking in Wrennie\'s kitchen?',
+  //   icon: 'fa-cross'
+  // },
+  // {
+  //   date: moment("2022/12/12"), // Monday
+  //   message: 'On top of your wardrobe!',
+  //   icon: 'fa-tree'
     
-  },
-  {
-    date: moment("2022/12/13"), // Tuesday 
-    message: 'Under the tree',
-    icon: 'fa-sleigh'
-  },
-  {
-    date: moment("2022/12/14"), // Wednesday
-    message: 'Mummy\'s computer',
-    icon: 'fa-candy-cane'
-  },
-  {
-    date: moment("2022/12/15"), // Thursday
-    message: 'In the window',
-    icon: 'fa-gift'
-  },
-  {
-    date: moment("2022/12/16"), // Friday
-    message: 'On Daddy\'s desk',
-    icon: 'fa-holly-berry'
-  },
-  {
-    date: moment("2022/12/17"), // Saturday
-    message: 'Next to Coal\'s treats!',
-    icon: 'fa-cross'
-  },
-  {
-    date: moment("2022/12/18"), // Sunday
-    message: 'Under the TV!',
-    icon: 'fa-tree'
-  },
-  {
-    date: moment("2022/12/19"), // Monday
-    message: 'By the father christmas on the window!',
-    icon: 'fa-sleigh'
-  },
-  {
-    date: moment("2022/12/20"), // Tuesday
-    message: 'In the chicken\'s bum!',
-    icon: 'fa-candy-cane'
-  },
-  {
-    date: moment("2022/12/21"), // Wednesday
-    message: 'The llama\'s back',
-    icon: 'fa-holly-berry'
-  },
-  {
-    date: moment("2022/12/22"), // Thursday
-    message: 'On the treadmill',
-    icon: 'fa-cross'
-  },
-  {
-    date: moment("2022/12/23"), // Friday
-    message: '',
-    icon: 'fa-gift'
-  },
+  // },
+  // {
+  //   date: moment("2022/12/13"), // Tuesday 
+  //   message: 'Under the tree',
+  //   icon: 'fa-sleigh'
+  // },
+  // {
+  //   date: moment("2022/12/14"), // Wednesday
+  //   message: 'Mummy\'s computer',
+  //   icon: 'fa-candy-cane'
+  // },
+  // {
+  //   date: moment("2022/12/15"), // Thursday
+  //   message: 'In the window',
+  //   icon: 'fa-gift'
+  // },
+  // {
+  //   date: moment("2022/12/16"), // Friday
+  //   message: 'On Daddy\'s desk',
+  //   icon: 'fa-holly-berry'
+  // },
+  // {
+  //   date: moment("2022/12/17"), // Saturday
+  //   message: 'Next to Coal\'s treats!',
+  //   icon: 'fa-cross'
+  // },
+  // {
+  //   date: moment("2022/12/18"), // Sunday
+  //   message: 'Under the TV!',
+  //   icon: 'fa-tree'
+  // },
+  // {
+  //   date: moment("2022/12/19"), // Monday
+  //   message: 'By the father christmas on the window!',
+  //   icon: 'fa-sleigh'
+  // },
+  // {
+  //   date: moment("2022/12/20"), // Tuesday
+  //   message: 'In the chicken\'s bum!',
+  //   icon: 'fa-candy-cane'
+  // },
+  // {
+  //   date: moment("2022/12/21"), // Wednesday
+  //   message: 'The llama\'s back',
+  //   icon: 'fa-holly-berry'
+  // },
+  // {
+  //   date: moment("2022/12/22"), // Thursday
+  //   message: 'On the treadmill',
+  //   icon: 'fa-cross'
+  // },
+  // {
+  //   date: moment("2022/12/23"), // Friday
+  //   message: '',
+  //   icon: 'fa-gift'
+  // },
   {
     date: moment("2022/12/24"), // Saturday
-    message: '',
+    message: 'In Coal\'s stocking',
     icon: 'fa-sleigh'
   },
   {
